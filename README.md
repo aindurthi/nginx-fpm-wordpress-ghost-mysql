@@ -19,7 +19,7 @@ To run in development environment
 
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
-docker exec -it <containerid> /bin/bash
+docker exec -it containerid /bin/bash
   
   type: hostname
   
@@ -29,7 +29,7 @@ To run in production environment:
 
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
-docker exec -it <containerid> /bin/bash
+docker exec -it containerid /bin/bash
   
   type: hostname
   
