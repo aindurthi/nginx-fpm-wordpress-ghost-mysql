@@ -13,7 +13,28 @@ sudo openssl req -x509 -new -nodes -key nginx.key -sha256 -days 1825 -out nginx.
 
 Using the below command copy the created files into /etc/ssl/private:
 
-cp nginx.* certificate.csr *.pem /etc/ssl/private
+cp nginx.crt nginx.key certificate.csr *.pem /etc/ssl/private
+
+To run in development environment
+
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+
+docker exec -it <containerid> /bin/bash
+  
+  type: hostname
+  
+  Observe: "dev_server" string in hostname cmdout
+  
+To run in production environment:
+
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+docker exec -it <containerid> /bin/bash
+  
+  type: hostname
+  
+  Observe: "prod_server" string in hostname cmdout
+  
 
 
 
