@@ -25,6 +25,10 @@ docker exec -it containerid /bin/bash
   
   Observe: "dev_server" string in hostname cmdout
   
+  type: exit
+
+docker-compose down -v
+  
 To run in production environment:
 
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
@@ -34,6 +38,10 @@ docker exec -it containerid /bin/bash
   type: hostname
   
   Observe: "prod_server" string in hostname cmdout
+  
+  type: exit
+
+docker-compose down -v
   
 
 
