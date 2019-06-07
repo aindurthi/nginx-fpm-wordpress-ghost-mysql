@@ -30,7 +30,7 @@ services:
 
   db:
     image: mariadb
-    hostname: dev_server_nginx
+    hostname: dev_server_mariadb
     environment:
       - MYSQL_USER=ghostuser
       - MYSQL_PASSWORD=ghostpassword
@@ -40,7 +40,7 @@ services:
       - backend
   ghost:
     image: ghost:1-alpine
-    hostname: dev_server_nginx
+    hostname: dev_server_ghost
     depends_on:
       - db
     ports:

@@ -32,7 +32,7 @@ services:
 
   db:
     image: mysql:5.7
-    hostname: prod_server_nginx
+    hostname: prod_server_mariadb
     environment:
       - MYSQL_USER=ghostuser
       - MYSQL_PASSWORD=ghostpassword
@@ -43,7 +43,7 @@ services:
       - backend
   ghost:
     image: ghost:1-alpine
-    hostname: prod_server_nginx
+    hostname: prod_server_ghost
     depends_on:
       - db
     ports:
