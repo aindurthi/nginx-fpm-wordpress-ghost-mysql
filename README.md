@@ -46,7 +46,5 @@ type: exit
 
 docker-compose down -v
 
-  
-...
 
 
