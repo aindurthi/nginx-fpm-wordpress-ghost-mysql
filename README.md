@@ -14,9 +14,13 @@ sudo openssl req -x509 -new -nodes -key nginx.key -sha256 -days 1825 -out nginx.
 
 sudo openssl dhparam 2048 -out dhparam.pem
 
+# Create a private directory for ssl:
+
+sudo mkdir -p /etc/ssl/private
+
 # Using the below command copy the created files into /etc/ssl/private:
 
-cp nginx.crt nginx.key certificate.csr *.pem /etc/ssl/private
+sudo cp nginx.crt nginx.key certificate.csr *.pem /etc/ssl/private
 
 # To run in development environment:
 
